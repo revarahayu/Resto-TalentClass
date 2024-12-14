@@ -1,0 +1,268 @@
+.food-item {
+    width: 100%;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px #00000015;
+    transition: 0.3s;
+    animation: fadeIn 1s;
+}
+
+.food-item-image {
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.food-item-info {
+    padding: 20px;
+    cursor:pointer;
+}
+
+.food-item-name-rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.food-item-name-rating p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.food-item-name-rating img {
+    width: 70px;
+}
+
+.food-item-desc {
+    color: #676767;
+    font-size: 12px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space: normal;
+    line-height: 1.5em;
+    max-height: 3em; 
+}
+
+.food-item-price {
+    color: #FF0000;
+    font-size: 22px;
+    font-weight: 500;
+    margin: 10px 0px;
+}
+
+.food-item-img-container {
+    position: relative;
+}
+
+.food-item-img-container .add {
+    width: 35px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.food-item-counter {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor:pointer;
+    padding: 6px;
+    border-radius: 50px;
+    background-color: white;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    width: 90%; 
+    max-width: 350px;
+    max-height: 90%;
+    overflow-y: auto; 
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+    box-sizing: border-box;
+}
+
+.modal::-webkit-scrollbar{
+    display:none;
+}
+
+span{
+    font-size:14px
+}
+
+.modal-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 110px;
+    margin-top: 15px;
+    margin-bottom:15px;
+    font-family: "Outfit", sans-serif;
+}
+
+.modal-close {
+    position: absolute;
+    top: 1px;
+    right: 10px;
+    font-size: 26px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-image {
+    width: 100%;
+    max-width: 300px; 
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.modal-rating {
+    width: 80px;
+    margin: 0;
+}
+
+.modal-desc{
+    margin-top:5px;
+    color: rgb(83, 83, 83);
+}
+
+.modal-name{
+    margin-top:-10px;
+    color: rgb(162, 133, 90);
+    font-size:30px;
+    font-weight:600;
+}
+
+.modal-price {
+    font-size: 22px;
+    color: #FF0000;
+    font-weight: 500;
+    margin: 0;
+}
+
+.modal-text{
+    color:black;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between; 
+    margin-top: 20px;
+  }
+  
+  .modal-add-to-cart,
+  .modal-close-button {
+    flex: 1;
+    padding: 12px 20px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 5px;
+  }
+  
+  .modal-close-button {
+    background-color:#F5F0CD;
+    color:rgb(155, 128, 86);
+  }
+  
+  .modal-close-button:hover {
+    background-color:rgb(210, 193, 166);
+    color:white;
+  }
+  
+  .modal-add-to-cart {
+    background-color: rgb(155, 128, 86);
+  }
+  
+  .modal-add-to-cart:hover {
+    background-color: rgb(88, 75, 56);
+  }
+  
+@media (max-width: 768px) {
+    .modal {
+        width: 80%;
+        max-width: 300px;
+        padding: 15px; 
+    }
+    .modal-image {
+        max-width: 300px; 
+        margin-top:5px;
+    }
+    .modal-close {
+        font-size: 18px;
+    }
+    .modal-price {
+        font-size: 16px; 
+    }
+    .modal h2 {
+        font-size: 16px; 
+    }
+    .modal-details {
+        gap: 90px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-buttons {
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom:5px;
+    }
+
+    .modal-add-to-cart,
+    .modal-close-button {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .modal {
+        width: 85%;
+        max-width: 260px;
+        padding: 10px;
+    }
+
+    .modal h2 {
+        font-size: 14px;
+    }
+
+    .modal-price {
+        font-size: 14px;
+    }
+
+    .modal-image {
+        max-width: 230px;
+        margin-bottom: 10px;
+    }
+    .modal-details {
+        flex-direction: column; /* Membuat elemen bertumpuk di layar 480px */
+        gap: 15px; /* Gap lebih kecil di layar 480px */
+    }
+}
